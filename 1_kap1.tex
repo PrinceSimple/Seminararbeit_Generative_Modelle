@@ -1,17 +1,27 @@
 \section{Machine Learning}\label{Machine Learning}
-Hier steht die Einleitung der Arbeit... Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\cite{mm2009}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+Machine Learning (ML) ist ein interdisziplinäres Teilgebiet der künstlichen Intelligenz, welches die Generierung von »Wissen« aus »Erfahrung« bezweckt. Mithilfe von ML werden IT-Systeme in die Lage versetzt, auf Basis vorhandener Datenbestände und Algorithmen Muster und Gesetzmäßigkeiten zu erkennen und ein komplexes Modell der Daten zu entwickeln. Das Modell, und damit die automatisch erworbene Wissensrepräsentation, kann dann verallgemeinert für neue Problemlösungen oder für die Analyse von bisher unbekannten Daten verwendet werden. Dazu verwendet ML zahlreiche Methoden, wobei in vorliegender Seminararbeit nur jene erläutert werden, welche für das allgemeine Verständnis generativer Modelle nötig sind.
+%\cite{mm2009}
 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-\cite{mm2009}
 
 \subsection{Deep Learning}\label{Deep Learning}
-$p_{model}$, $p_{model}$ $\boldsymbol{\hat{\theta}}$
-\textsl{Lorem} 
-Um Annahmen nicht bereits im Voraus treffen zu müssen, wird ein Modell benötigt, das die relevanten Strukturen aus den Daten selbst ableiten kann. Hierbei zeichnet sich Deep Learning aus. Die Tatsache, dass Deep Learning seine eigenen Merkmale in einem niederdimensionalen Raum finden kann, bedeutet eine Form des Representation Learnings
+%$p_{model}$, $p_{model}$ $\boldsymbol{\hat{\theta}}$
+%\textsl{Lorem} 
+Deep Learning umfasst eine Reihe von Algorithmen, deren Architektur auf mehreren nacheinander angeordneten Verarbeitungsschichten basiert und deren Aufgabe es ist, aus unstrukturierten Daten übergeordnete Repräsentationen zu lernen.
+Deep-Learning-Modelle können auf strukturierte Daten angewendet werden, aber ihre eigentliche Stärke, insbesondere im Hinblick auf die generative Modellierung, ergibt sich aus ihrer Fähigkeit, unstrukturierte Daten verarbeiten zu können. In den meisten Fällen liegt es in der Natur der Aufgabe, unstrukturierte Daten wie neue Bilder oder echte Textzeilen zu erzeugen. Daher verwundert es wenig, dass vor allem die Entwicklungen im Deep Learning einen bedeutenden Einfluss auf die generative Modellierung hatten.
+Bei der Mehrheit aller Deep-Learning-Modelle handelt es sich um künstliche neuronale Netze (KNNs, kurz »neuronale Netze«) mit mehreren hintereinanderliegenden verborgenen Schichten. Aus diesem Grund ist Deep Learning inzwischen fast zum Synonym für tiefe neuronale Netzwerke geworden. Es ist jedoch wichtig darauf hinzuweisen, dass jedes System, das mehrere Schichten verwendet, um übergeordnete Darstellungen der Eingangsdaten zu lernen, auch eine Form des Deep Learning ist (z. B. Deep-Believe-Netzwerke und Deep-Boltzmann-Maschinen).
+Um Annahmen nicht bereits im Voraus treffen zu müssen, wird ein Modell benötigt, das die relevanten Strukturen aus den Daten selbst ableiten kann. Hierbei zeichnet sich Deep Learning aus. Die Tatsache, dass Deep Learning seine eigenen Merkmale in einem niederdimensionalen Raum finden kann, bedeutet eine Form des Representation Learnings.
 
-\subsection{supervised vs. unsupervised learning}\label{supervised vs. unsupervised learning}
-Hier steht die Einleitung der Arbeit... Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\subsection{Representation Learning}\label{Representation Learning}
+Die Grundidee beim Lernen von Repräsentationen besteht darin, nicht den hochdimensionalen Stichprobenraum direkt zu modellieren, sondern jede Beobachtung im Trainingsdatensatz mittels eines niederdimensionalen latenten Raums zu erfassen. Das Modell muss dann eine Mapping-Funktion lernen, die einen Punkt im latenten Raum nehmen und ihn auf einen Punkt in dem ursprünglichen Raum abbilden kann. Mit anderen Worten: Jeder Punkt im latenten Raum ist die Darstellung einer hochdimensionalen Repräsentation der Eingabedaten, beispielsweise eines Bilds.
 
-\subsection{discriminative vs. generative Modelle}\label{discriminative vs. generative Modelle}
-Hier steht die Einleitung der Arbeit... Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\subsection{Vergleich diskriminativer und generativer Modelle}\label{Vergleich diskriminativer und generativer Modelle}
+Um zu verstehen, was generative Modelle leisten sollen und warum sie wichtig sind, ist es sinnvol, sie mit ihrem Gegenstück, den diskriminativen Modellen, zu vergleichen. Die meisten Fragestellungen im ML sind diskriminativer Natur.
+
+Ein wesentlicher Unterschied besteht darin, dass bei diskriminativen Modellen jede Beobachtung in den Trainingsdaten mit einem Label versehen ist. Im Fall einer binären Klassifikationsaufgabe wären beispielsweise Gemälde von Picasso mit einer 1 und alle anderen mit einer 0 gekennzeichnet. Das Modell lernt dann, beide Gruppen zu unterscheiden, und gibt die Wahrscheinlichkeit aus, dass eine neue Beobachtung das Label 1 trägt – gleichbedeutend damit, dass sie von Picasso gemalt wurde.
+Deshalb ist diskriminative Modellierung gleichbedeutend mit überwachtem Lernen beziehungsweise dem Erlernen einer Funktion, die eine Eingabe mithilfe eines mit Labeln versehenen Datensatzes auf eine Ausgabe abbildet.
+Für generative Modelle bedarf es für gewöhnlich nur ungelabelter Datensätze (als Form des unüberwachten Lernens). Sie kann jedoch auch auf einen mit Labeln versehenen Datensatz angewendet werden, um zu lernen, wie man Beobachtungen und Merkmale aus den einzelnen Kategorien erzeugt.
+
+
+%\subsection{überwachtes und unüberwachtes Lernen}\label{überwachtes und unüberwachtes Lernen}
+%Hier steht die Einleitung der Arbeit... Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.

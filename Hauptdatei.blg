@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Hauptdatei.aux
+The style file: alphadin.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Hauptdatei.bib
+You've used 8 entries,
+            4793 wiz_defined-function locations,
+            938 strings with 7869 characters,
+and the built_in function-call counts, 4990 in all, are:
+= -- 528
+> -- 146
+< -- 152
++ -- 176
+- -- 52
+* -- 324
+:= -- 882
+add.period$ -- 14
+call.type$ -- 8
+change.case$ -- 44
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 150
+empty$ -- 320
+format.name$ -- 102
+if$ -- 970
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 34
+newline$ -- 62
+num.names$ -- 24
+pop$ -- 64
+preamble$ -- 1
+purify$ -- 60
+quote$ -- 0
+skip$ -- 280
+stack$ -- 0
+substring$ -- 257
+swap$ -- 34
+text.length$ -- 26
+text.prefix$ -- 5
+top$ -- 0
+type$ -- 80
+warning$ -- 0
+while$ -- 41
+width$ -- 10
+write$ -- 127

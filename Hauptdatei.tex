@@ -1,37 +1,27 @@
+
 % Festlegung des Allgemeinen Dokumentenformats
 \documentclass[a4paper,12pt,headsepline]{scrartcl}
-
 % Umlaute unter UTF8 nutzen
 \usepackage[utf8]{inputenc}
-
 % Variablen
 \input{latex_einstellungen/variablen}
-
 % weitere Pakete
 % Grafiken aus PNG Dateien einbinden
 \usepackage{graphicx}
-
 % Deutsche Sonderzeichen und Silbentrennung nutzen
 \usepackage[ngerman]{babel}
-
 % Eurozeichen einbinden
 \usepackage[right]{eurosym}
-
 % Zeichenencoding
 \usepackage[T1]{fontenc}
-
 \usepackage{lmodern}
-
 % floatende Bilder ermöglichen
 %\usepackage{floatflt}
-
 % mehrseitige Tabellen ermöglichen
 \usepackage{longtable}
-
 % Unterstützung für Schriftarten
 %\newcommand{\changefont}[3]{ 
 %\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
-
 % Packet für Seitenrandabständex und Einstellung für Seitenränder
 \usepackage{geometry}
 \geometry{left=3.5cm, right=2cm, top=2.5cm, bottom=2cm}
@@ -52,7 +42,7 @@
 %\pagestyle{headings}
 
 % erzeugt Inhaltsverzeichnis mit Querverweisen zu den Abschnitten (PDF Version)
-\usepackage[bookmarksnumbered,pdftitle={\titleDocument},hyperfootnotes=false]{hyperref}
+\usepackage[bookmarksnumbered,pdftitle={\titleDocument},hyperfootnotes=false, hidelinks]{hyperref}
 %\hypersetup{colorlinks, citecolor=red, linkcolor=blue, urlcolor=black}
 %\hypersetup{colorlinks, citecolor=black, linkcolor= black, urlcolor=black}
 
@@ -89,9 +79,9 @@
 \usepackage{makeidx}
 
 % für Listings
-\usepackage{listings}
-\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, keywordstyle=\color{black}\bfseries, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
-\lstset{language=java}
+%\usepackage{listings}
+%\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, keywordstyle=\color{black}\bfseries, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
+%\lstset{language=java}
 
 % Indexerstellung
 \makeindex
@@ -180,12 +170,12 @@
 %\endgroup
 
 % das Tabellenverzeichnis
-\newpage
+%\newpage
 % Tabellenverzeichnis soll im Inhaltsverzeichnis auftauchen
-\addcontentsline{toc}{section}{Tabellenverzeichnis}
+%\addcontentsline{toc}{section}{Tabellenverzeichnis}
 % \fancyhead[L]{Abbildungsverzeichnis / Abkürzungsverzeichnis} %Kopfzeile links
 % Tabellenverzeichnis endgültig anzeigen
-\listoftables
+%\listoftables
 
 %% WORKAROUND für Listings
 %\makeatletter% --> De-TeX-FAQ
@@ -206,13 +196,13 @@
 %}
 %\makeatother% --> \makeatletter
 % das Listingverzeichnis
-%\newpage
+\newpage
 % Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
 %\addcontentsline{toc}{section}{Listingverzeichnis}
 %\fancyhead[L]{Listingverzeichnis} %Kopfzeile links
 %\renewcommand{\lstlistlistingname}{Listingverzeichnis}
 %\lstlistoflistings
-%%%%
+
 
 % das Abkürzungsverzeichnis
 \newpage
@@ -247,19 +237,20 @@
 % hier können weitere Kapitel angelegt und eingetragen werden
 % ....
 
-\input{7_kap4}
-\newpage
+\input{4_kap4}
 
-\input{8_fazit}
+\newpage
+\input{5_fazit}
+
 
 %\input{beispiel}
 % einfacher Zeilenabstand
 \singlespacing
 % Literaturliste soll im Inhaltsverzeichnis auftauchen
 \newpage
-\addcontentsline{toc}{section}{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Quellenverzeichnis}
 % Literaturverzeichnis anzeigen
-\renewcommand\refname{Literaturverzeichnis}
+\renewcommand\refname{Quellenverzeichnis}
 \bibliography{Hauptdatei}
 
 %% Index soll Stichwortverzeichnis heissen
@@ -270,12 +261,12 @@
 % % Stichwortverzeichnis endgültig anzeigen
 % \printindex
 
-\onehalfspacing
+%\onehalfspacing
 % evtl. Anhang
-\newpage
-\addcontentsline{toc}{section}{Anhang}
-\fancyhead[L]{Anhang} %Kopfzeile links
-\input{anhang/anhang}
+%\newpage
+%\addcontentsline{toc}{section}{Anhang}
+%\fancyhead[L]{Anhang} %Kopfzeile links
+%\input{anhang/anhang}
 
 % Eidesstattliche Erklärung
 %\newpage
