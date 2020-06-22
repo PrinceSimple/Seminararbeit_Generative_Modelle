@@ -3,8 +3,13 @@
 \nomenclatureentry{aCNN@[{CNN}]\begingroup Convolutional Neural Network\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{aRNN@[{RNN}]\begingroup Recurrent Neural Network\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{aVAE@[{VAE}]\begingroup Variational Autoencoder\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{aKI@[{KI}]\begingroup künstliche Intelligenz\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{aAI@[{AI}]\begingroup artificial intelligence\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{aML@[{ML}]\begingroup machine learning\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{aKNN@[{KNN}]\begingroup künstliches neurales Netz\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{aLSTM@[{LSTM}]\begingroup long short-term memory\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aKI@[{KI}]\begingroup Künstliche Intelligenz\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aAI@[{AI}]\begingroup Artificial Intelligence\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aML@[{ML}]\begingroup Machine Learning\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aKNN@[{KNN}]\begingroup Künstliches Neurales Netz\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aLSTM@[{LSTM}]\begingroup Long Short-Term Memory\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aNIPS@[{NIPS}]\begingroup Neural Information Processing Systems (Konferenz)\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aDCGAN@[{DCGAN}]\begingroup Deep Convolutional Generative Adversarial Networks\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aKL-Divergenz@[{KL-Divergenz}]\begingroup Kullback-Leibler-Divergenz\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aSRGAN@[{SRGAN}]\begingroup Super Resolution Generative Adversarial Network\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aDCGAN@[{DCGAN}]\begingroup Deep Convolutional Generative Adversarial Network\nomeqref {0}|nompageref}{iii}

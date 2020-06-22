@@ -8,6 +8,7 @@
 % weitere Pakete
 % Grafiken aus PNG Dateien einbinden
 \usepackage{graphicx}
+\usepackage{float}
 % Deutsche Sonderzeichen und Silbentrennung nutzen
 \usepackage[ngerman]{babel}
 % Eurozeichen einbinden
@@ -25,19 +26,20 @@
 % Packet für Seitenrandabständex und Einstellung für Seitenränder
 \usepackage{geometry}
 \geometry{left=3.5cm, right=2cm, top=2.5cm, bottom=2cm}
-
+% Abbildungnummerierung nach Kapitel
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
 % Paket für Boxen im Text
 \usepackage{fancybox}
-
 % bricht lange URLs "schön" um
 \usepackage[hyphens,obeyspaces,spaces]{url}
-
 % Paket für Textfarben
 \usepackage{color}
-
 % Mathematische Symbole importieren
 \usepackage{amssymb, amsmath}
-
+%\usepackage{draftwatermark}
+% figures in the section!
+\usepackage[section]{placeins}
 % auf jeder Seite eine Überschrift (alt, zentriert)
 %\pagestyle{headings}
 
@@ -102,7 +104,6 @@
 % Index mit Abkürzungen erzeugen
 \makenomenclature
 %\makeglossary
-
 % Abkürzungsverzeichnis TeTEX Version
 % \usepackage[german]{nomencl}
 % \makenomenclature
@@ -233,14 +234,10 @@
 
 \input{3_kap3}
 \newpage
-
 % hier können weitere Kapitel angelegt und eingetragen werden
-% ....
-
-\input{4_kap4}
-
+\input{4_zusammenfassung}
 \newpage
-\input{5_fazit}
+\input{5_ausblick}
 
 
 %\input{beispiel}
@@ -248,9 +245,9 @@
 \singlespacing
 % Literaturliste soll im Inhaltsverzeichnis auftauchen
 \newpage
-\addcontentsline{toc}{section}{Quellenverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
 % Literaturverzeichnis anzeigen
-\renewcommand\refname{Quellenverzeichnis}
+\renewcommand\refname{Literaturverzeichnis}
 \bibliography{Hauptdatei}
 
 %% Index soll Stichwortverzeichnis heissen

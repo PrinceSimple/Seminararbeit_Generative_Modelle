@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Hauptdatei.aux
 The style file: alphadin.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -8,44 +8,46 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Hauptdatei.bib
-You've used 8 entries,
+Warning--empty pages in Spi2018
+You've used 11 entries,
             4793 wiz_defined-function locations,
-            938 strings with 7869 characters,
-and the built_in function-call counts, 4990 in all, are:
-= -- 528
-> -- 146
-< -- 152
-+ -- 176
-- -- 52
-* -- 324
-:= -- 882
-add.period$ -- 14
-call.type$ -- 8
-change.case$ -- 44
-chr.to.int$ -- 8
-cite$ -- 8
-duplicate$ -- 150
-empty$ -- 320
-format.name$ -- 102
-if$ -- 970
+            948 strings with 8096 characters,
+and the built_in function-call counts, 5529 in all, are:
+= -- 555
+> -- 156
+< -- 125
++ -- 150
+- -- 50
+* -- 329
+:= -- 971
+add.period$ -- 18
+call.type$ -- 11
+change.case$ -- 52
+chr.to.int$ -- 11
+cite$ -- 12
+duplicate$ -- 196
+empty$ -- 424
+format.name$ -- 106
+if$ -- 1120
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 34
-newline$ -- 62
-num.names$ -- 24
-pop$ -- 64
+missing$ -- 46
+newline$ -- 76
+num.names$ -- 33
+pop$ -- 86
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 74
 quote$ -- 0
-skip$ -- 280
+skip$ -- 312
 stack$ -- 0
-substring$ -- 257
-swap$ -- 34
+substring$ -- 232
+swap$ -- 35
 text.length$ -- 26
-text.prefix$ -- 5
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 80
-warning$ -- 0
-while$ -- 41
-width$ -- 10
-write$ -- 127
+type$ -- 98
+warning$ -- 1
+while$ -- 45
+width$ -- 12
+write$ -- 158
+(There was 1 warning)
