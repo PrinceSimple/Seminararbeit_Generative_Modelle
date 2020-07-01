@@ -267,6 +267,18 @@ INPUT f:/texlive/2020/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/Springer_GAN.jpg
 INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/Springer_GAN.jpg
 INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/Springer_GAN.jpg
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/StyleGAN_example_2.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/StyleGAN_example_2.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/StyleGAN_example_2.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/pggan_schema.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/pggan_schema.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/pggan_schema.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/adain_StyleGAN.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/adain_StyleGAN.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/adain_StyleGAN.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/CycleGAN_Beispiel.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/CycleGAN_Beispiel.png
+INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/abb/CycleGAN_Beispiel.png
 INPUT 3_kap3.tex
 INPUT 3_kap3.tex
 INPUT 4_zusammenfassung.tex
@@ -283,15 +295,19 @@ INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissensc
 INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/Hauptdatei.out
 INPUT c:/Users/Frank/Google Drive/Studium/Semester V/Einführung in die wissenschaftliche Projektarbeit/Seminararbeit_Generative_Modelle/Hauptdatei.out
 INPUT f:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-INPUT f:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT f:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT f:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT f:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT f:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb
+INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT f:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

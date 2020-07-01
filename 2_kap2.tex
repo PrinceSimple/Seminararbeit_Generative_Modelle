@@ -12,7 +12,7 @@ Es gibt also eine unbekannte Wahrscheinlichkeitsverteilung, die erklärt, warum 
 \subsection{Vergleich diskriminativer und generativer Modelle}\label{Vergleich diskriminativer und generativer Modelle}
 Um zu verstehen, was generative Modelle leisten sollen und warum sie wichtig sind, ist es sinnvoll, sie mit ihrem Gegenstück, den diskriminativen Modellen, zu vergleichen. Die meisten Fragestellungen im ML sind diskriminativer Natur.
 
-Ein wesentlicher Unterschied besteht darin, dass bei diskriminativen Modellen jede Beobachtung in den Trainingsdaten mit einem Label versehen ist. Im Fall einer binären Klassifikationsaufgabe wären beispielsweise Gemälde von Picasso mit einer 1 und alle anderen mit einer 0 gekennzeichnet. Das Modell lernt dann, beide Gruppen zu unterscheiden, und gibt die Wahrscheinlichkeit aus, dass eine neue Beobachtung das Label 1 trägt – gleichbedeutend damit, dass sie von Picasso gemalt wurde.
+Ein wesentlicher Unterschied besteht darin, dass bei diskriminativen Modellen jede Beobachtung in den Trainingsdaten mit einem Label versehen ist. Im Fall einer binären Klassifikationsaufgabe wären beispielsweise Gemälde von Picasso mit einer 1 und alle anderen mit einer 0 gekennzeichnet. Das Modell lernt dann, beide Gruppen zu unterscheiden, und gibt die Wahrscheinlichkeit aus, dass eine neue Beobachtung das Label 1 trägt – gleichbedeutend damit, dass sie von Picasso gemalt wurde.\cite{fos19}
 Deshalb ist diskriminative Modellierung synonym mit überwachtem Lernen beziehungsweise dem Erlernen einer Funktion, die eine Eingabe mithilfe eines mit Labeln versehenen Datensatzes auf eine Ausgabe abbildet.
 Für generative Modelle bedarf es für gewöhnlich nur ungelabelter Datensätze (als Form des unüberwachten Lernens). Sie kann jedoch auch auf einen mit Labeln versehenen Datensatz angewendet werden, um zu lernen, wie man Beobachtungen und Merkmale aus den einzelnen Kategorien erzeugt.
 
@@ -31,7 +31,7 @@ Da das Encoding bzw. der latente Raum sehr viel weniger Speicherplatz bedarf als
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth,angle=0]{abb/autoencoder_standard}
-    \caption[Autoencoder]{Funktionsweise eines Autoencoders am Beispielbild der Zahl \frqq{5\flqq} aus dem MNIST-Set}
+    \caption[Funktionsweise eines Autoencoders]{Funktionsweise eines Autoencoders am Beispielbild der Zahl \frqq{5\flqq} aus dem MNIST-Set}
 \end{figure}
 Standard-Autoencoder können also kompakte Datenrepräsentationen lernen und ihre Eingabedaten sehr gut rekonstruieren. Sie können auch sehr gut zur Bildreinigung verrauschter Bilder verwendet werden, da der Encoder lernt, dass die Position des Rauschens innerhalb des latenten Raums nicht relevant ist. Das Problem mit Standard-Autoencodern ist im Hinblick auf generative Modelle, dass sie keine Interpolation im latenten Raum zulassen \cite{Spi2018}. Man möchte ja mit generativen Modellen nicht die Originaldaten wiederherstellen, sondern dem latenten Raum zufällige Stichproben entnehmen bzw. Variationen der Eingabedaten aus dem latenten Raum generieren. Wenn diese Stichproben in Raumdiskontinuitäten liegen, werden inkorrekte Ausgabedaten erzeugt, weil der Decoder schlichtweg keine Erfahrung mit Datenpunkten aus dieser Region des latenten Raumes hat.
 
@@ -49,7 +49,7 @@ Dies wird erreicht, indem der Encoder statt \emph{einem} Vektor der Größe $n$,
     \caption[Unterschied im Encoding - Autoencoder vs. VAE]{Unterschied im Encoding - Autoencoder vs. VAE \cite{sha18}}
 \end{figure}
 \FloatBarrier
-Das Modell hat damit einen gewissen Grad an lokaler Variation im Encoding, jedoch keine überlappenden Cluster an variierenden Stichprobenencodings. Im Idealfall möchte man nicht nur im lokalen Stichprobenraum Variationen entnehmen, wo sich die Stichproben sehr ähnlich sind, sondern zwischen verschiedenen Klassen von Stichproben kontinuierlich interpolieren. Alle erkannten Merkmalcluster sollen also so nah wie möglich aneinander im latenten Raum angeordnet sein. Dies wird mit der Einrechnung der Kullback-Leibler-Divergenz in die Verlustfunktion erreicht \cite{sha18}. Die KL-Divergenz ist eine Methode, um zu messen, wie sehr sich eine Wahrscheinlichkeitsverteilung von einer anderen unterscheidet. Im Fall eines VAE soll gemessen werden, wie sehr sich die Normalverteilung mit den Parametern $\mu$ und $\sigma$ von der Standardnormalverteilung (Glockenkurve) unterscheidet. Das Netzwerk wird damit für die Codierung von Beobachtungen zu $\mu$ und $\sigma$ bestraft, die deutlich unterschiedlich von den Parametern einer Standardnormalverteilung sind \cite[S.102]{fos19}.
+Das Modell hat damit einen gewissen Grad an lokaler Variation im Encoding, jedoch keine überlappenden Cluster an variierenden Stichprobenencodings. Im Idealfall möchte man nicht nur im lokalen Stichprobenraum Variationen entnehmen, wo sich die Stichproben sehr ähnlich sind, sondern zwischen verschiedenen Klassen von Stichproben kontinuierlich interpolieren \cite{doe16}. Alle erkannten Merkmalcluster sollen also so nah wie möglich aneinander im latenten Raum angeordnet sein. Dies wird mit der Einrechnung der Kullback-Leibler-Divergenz in die Verlustfunktion erreicht \cite{sha18}. Die KL-Divergenz ist eine Methode, um zu messen, wie sehr sich eine Wahrscheinlichkeitsverteilung von einer anderen unterscheidet. Im Fall eines VAE soll gemessen werden, wie sehr sich die Normalverteilung mit den Parametern $\mu$ und $\sigma$ von der Standardnormalverteilung (Glockenkurve) unterscheidet. Das Netzwerk wird damit für die Codierung von Beobachtungen zu $\mu$ und $\sigma$ bestraft, die deutlich unterschiedlich von den Parametern einer Standardnormalverteilung sind \cite[S.102]{fos19}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth,angle=0]{abb/VAE_KLL}
@@ -65,10 +65,10 @@ Mit einer optimierten Verlustfunktion und der KL-Divergenz können Verteilungen 
 
 \subsection{Generative Adversarial Networks (GANs)}\label{Generative Adversarial Networks (GANs)}
 
-Die GAN-Architektur für ein auf Deep Learning basierendes, generatives Modell wurde erstmals 2014 von Ian Goodfellow, et al. auf der NIPS-Konferenz vorgestellt. Sie besteht aus zwei Submodellen:
+Die GAN-Architektur für ein auf Deep Learning basierendes, generatives Modell wurde erstmals 2014 von Ian Goodfellow et al. auf der NIPS-Konferenz vorgestellt. Sie besteht aus zwei Submodellen:
 \begin{itemize}
     \item Generator (G) - Modell, das neue Beobachtungen als Eingabedaten generiert
-    \item Diskriminator (D) - Modell, das klassifiziert, ob die zugeführten Daten vom Trainingset oder vom Generator stammen
+    \item Diskriminator (D) - Modell, das klassifiziert, ob die zugeführten Daten vom Trainingsset oder vom Generator stammen
 \end{itemize}
 Beide Modelle werden gleichzeitig trainiert. Der Generator versucht, Zufallsrauschen in Beobachtungen umzuwandeln, die so aussehen, als würden sie dem Trainingsdatensatz entstammen, und der Diskriminator versucht zu erkennen, ob eine Beobachtung aus dem ursprünglichen Datensatz stammt oder eine der Fälschungen des Generators ist \cite{bro19}. Am Anfang gibt der Generator sehr verrauschte Bilder aus und der Diskriminator prognostiziert zufällig. Der entscheidende Punkt von GANs ist, wie das Training der beiden Netzwerke abgewechselt wird, sodass, sobald der Generator geschickter im Täuschen des Diskriminators wird, dieser sich anpassen muss, um weiterhin die gefälschten Bilder zu erkennen. Das wiederum treibt den Generator dazu an, neue Wege zu finden, um den Diskriminator zu täuschen \cite[S.99]{fos19}.
 \begin{figure}[H]
@@ -76,6 +76,40 @@ Beide Modelle werden gleichzeitig trainiert. Der Generator versucht, Zufallsraus
     \includegraphics[width=1\textwidth,angle=0]{abb/Springer_GAN}
     \caption[Funktionsweise eines GAN]{Funktionsweise eines GAN \cite{SDT18}}
 \end{figure}
-Man kann sich das Training eines GAN als Nullsummenspiel vorstellen: "Das Generatornetzwerk sei dabei ein Geldfälscher, der versucht, Falschgeld zu produzieren. Das Diskriminatornetzwerk sei die Polizei, die versucht, echtes Geld von gefälschtem Geld zu unterscheiden. Um das Spiel zu gewinnen muss, der Geldfälscher lernen, Geldscheine zu erzeugen, welche von echtem Geld ununterscheidbar sind." \cite{goo16} In diesem Fall bedeutet Nullsummenspiel, dass das jeweilige Netzwerk per Fehlerrückführung in jedem Trainingsschritt bestraft wird und dessen Modellparameter variiert werden. So entsteht nach sehr vielen Trainingsschritten ein generatives Modell, welches täuschend echte Daten generieren kann. Die GAN-Architektur wird vor allem bei der Generierung von Bilddaten verwendet.
+Man kann sich das Training eines GAN als Nullsummenspiel vorstellen: Das Generatornetzwerk sei dabei ein Geldfälscher, der versucht, Falschgeld zu produzieren. Das Diskriminatornetzwerk sei die Polizei, die versucht, echtes Geld von gefälschtem Geld zu unterscheiden. Um das Spiel zu gewinnen, muss der Geldfälscher lernen, Geldscheine zu erzeugen, welche von echtem Geld ununterscheidbar sind\cite{goo16}. In diesem Fall bedeutet Nullsummenspiel, dass das jeweilige Netzwerk per Fehlerrückführung in jedem Trainingsschritt bestraft wird und dessen Modellparameter variiert werden. So entsteht nach sehr vielen Trainingsschritten ein generatives Modell, welches täuschend echte Daten generieren kann. Die GAN-Architektur wird vor allem bei der Generierung von Bilddaten verwendet.
 
-Im Original-GAN-Forschungspaper wurden dichte Schichten anstelle der Konvolutionsschichten für das Training verwendet. Seitdem hat sich jedoch gezeigt, dass Konvolutionsschichten dem Diskriminator eine bessere Vorhersagekraft verleihen. Diese Art von GANs wird in der Literatur auch DCGAN (Deep Convolutional Generative Adversarial Network) genannt, aber heutzutage enthalten fast alle GAN-Architekturen Konvolutionsschichten, sodass das »DC« bereits enthalten ist, wenn über GANs geredet wird \cite{bro19}. Seit der ersten Vorstellung 2014 wurden bis heute mehr als 500 verschiedene Erweiterungen von GAN-Architekturen in wissenschaftlichen Papers vorgestellt. Diese haben dann spezielle Eigenschaften, die zu einer verbesserten Lösung der jeweiligen Aufgabenstellung führt.
+Im Original-GAN-Forschungspaper von Ian Goodfellow et al. wurden dichte Schichten anstelle von Konvolutionsschichten für das Training verwendet. Seitdem hat sich jedoch gezeigt, dass Konvolutionsschichten dem Diskriminator eine bessere Vorhersagekraft verleihen. Diese Art von GANs wird in der Literatur auch DCGAN (Deep Convolutional Generative Adversarial Network) genannt. Heutzutage enthalten fast alle GAN-Architekturen Konvolutionsschichten, sodass das »DC« bereits enthalten ist, wenn über GANs geredet wird \cite{bro19}. Seit der ersten Vorstellung 2014 wurden bis heute mehr als 500 verschiedene Erweiterungen von GAN-Architekturen in wissenschaftlichen Papers vorgestellt. Diese haben verschiedene spezielle Eigenschaften, die zu einer verbesserten Lösung der jeweiligen Aufgabenstellung führt. Zwei der berühmtesten Erweiterungen von GANs sollen in dieser Seminararbeit erläutert werden.
+
+\subsubsection{StyleGAN}~\\
+In dem IEEE-Konferenzpaper \emph{\frqq{A Style-Based Generator Architecture for Generative Adversarial Networks}\flqq} wurde das Konzept des StyleGAN 2019 von Nvidia-Mitarbeitern vorgestellt. Die Bilder von menschlichen Gesichtern in Abbildung 2.8 wurden mit diesem generativen Modell erzeugt. StyleGAN besteht im Wesentlichen aus zwei Erweiterungen eines GAN:
+Die Erzeugung hochauflösender Bilder durch PG-GAN (Progressively Growing GAN) und Einbindung von Stiltransfer durch AdaIN.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth,angle=0]{abb/StyleGAN_example_2}
+    \caption[Beispielbilder StyleGAN]{Beispielbilder StyleGAN \cite{kar19}}
+\end{figure}
+
+\paragraph[]{PG-GAN}
+\frqq{Progressives Wachstum\flqq} ist eine Methode zum Generieren von hochauflösenden Bildern. Ein PG-GAN fängt mit einer niedrigaufgelösten Repräsentation eines Bildes an und fügt im Trainingsprozess allmählich hochauflösendere Generatoren und Diskriminatoren hinzu. Im Schema in Abbildung 2.9 wird mit einer Auflösung von 4x4 begonnen und diese schrittweise auf 1024x1024 erhöht.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth,angle=0]{abb/pggan_schema}
+    \caption[PG-GAN Schema]{PG-GAN Schema \cite{kar19}}
+\end{figure}
+
+\paragraph[]{AdaIN}
+\frqq{Adaptive Image Normalization\flqq} (kurz AdaIN) ist ein Stiltransferalgorithmus und wurde 2017 von Xun Huang et al. vorgestellt. Im StyleGAN wird er als Normalisierungsmodul verwendet und in jeder Auflösungsebene des Generators im PG-GAN angewendet. AdaIN entspricht einer Art neuronaler Netzwerkschicht, die den Mittelwert und die Varianz der Ausgaben $x_i$ der einzelnen Feature-Maps aus einer jeweils vorgegebenen Schicht im Synthesenetzwerk mit einem Referenzstil-Bias $y_{b,i}$ und einer Skalierung $y_{s,i}$ anpasst. Die Stilparameter werden berechnet, indem zuerst ein latenter Vektor $z$ durch ein Mapping-Netzwerk $f$ geleitet wird, um einen Zwischenvektor $w$ zu erzeugen. Dieser wird dann durch eine dicht verbundene Schicht umgewandelt, um die Vektoren $y_{b,i}$ und $y_{s,i}$ mit jeweils einer Länge $n$ (der Anzahl der von der Konvolutionsschicht im Synthesenetzwerk ausgegebenen Kanäle) zu erzeugen. Dabei geht es vor allem darum, den Auswahlprozess des Stils für das Bild (das Mapping-Netzwerk) von dem eigentlichen Erzeugungsvorgang eines Bilds mit einem bestimmten Stil (das Synthesenetzwerk) zu trennen. Die adaptiven Instanz-Normalisierungsschichten stellen sicher, dass die Stilvektoren, die in jede Schicht eingespeist werden, nur Merkmale auf dieser Schicht beeinflussen, indem sie verhindern, dass Informationen bezüglich des Stils zwischen den Layern durchsickern \cite[S.277f]{fos19}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth,angle=0]{abb/adain_StyleGAN}
+    \caption[Schema eines StyleGAN]{Schema eines StyleGAN \cite{kar19}}
+\end{figure}
+
+\subsubsection{CycleGAN}~\\
+Das IEEE-Konferenzpaper von 2017 \cite{zhu17} stellte einen bedeutenden Fortschritt im Bereich des Stiltransfers dar. Es zeigt, wie ein Modell trainiert werden kann, das den Stil von einer Reihe von Referenzbildern auf ein anderes Bild überträgt, ohne einen Trainingssatz gepaarter Beispiele zu benötigen. Dies stellt eine Form des unüberwachten Lernens dar.
+Ein CycleGAN generiert Bilder nicht aus Zufallsrauschen, sondern benutzt bereits vorhandene Bilder um eine neue Version der Bilder herzustellen. Diese sogenannte \frqq{Bild-zu-Bild Translation\flqq} erfolgt auf Basis des Bildinhalts auf der einen Seite, und des Bildstils auf der anderen. Die Trainingsdaten liegen also ungepaart aus zwei verschiedenen Domänen vor und müssen nicht über 1-zu-1-Zuordnungen verfügen. Das Netzwerk besteht aus zwei kombinierten GANs. Es nimmt ein Bild aus der Domäne $X$ als Input für den ersten Generator $G_X{\scriptscriptstyle\rightarrow}_Y$, dessen Aufgabe die Transformation eines Bildes der Domäne $X$ in die Zieldomäne $Y$ ist. Dieses neu generierte Bild wird dann Generator $G_Y{\scriptscriptstyle\rightarrow}_X$ zugeführt, welcher das Bild in ein Bild der Domäne $D_X$ zurückkonvertiert. Beide Generatoren haben korrespondierende Diskriminatoren, welche versuchen, die generierten Bilder von den Bildern ihrer jeweiligen Domäne zu unterscheiden \cite{zhu17}. Im genannten Paper wurde das Modell für 200 Epochen trainiert, um die Bildbeispiele in Abbildung 2.11 zu erhalten.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth,angle=0]{abb/CycleGAN_Beispiel}
+    \caption[Beispiele von Stiltransfer mit CycleGAN]{Beispiele von Stiltransfer mit CycleGAN \cite{zhu17}}
+\end{figure}

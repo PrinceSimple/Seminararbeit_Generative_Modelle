@@ -1,8 +1,12 @@
 \babel@toc {ngerman}{}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces schematische Darstellung eines Autoencoders}}{5}{figure.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Autoencoder}}{5}{figure.2}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Funktionsweise eines Autoencoders}}{5}{figure.2}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces schematische Darstellung eines VAE}}{6}{figure.3}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Unterschied im Encoding - Autoencoder vs. VAE}}{7}{figure.4}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Verteilung der Cluster mit und ohne KL-Divergenz}}{7}{figure.5}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Verteilung im Encoding eines VAE}}{8}{figure.6}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Funktionsweise eines GAN}}{9}{figure.7}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Beispielbilder StyleGAN}}{10}{figure.8}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces PG-GAN Schema}}{10}{figure.9}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Schema eines StyleGAN}}{11}{figure.10}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Beispiele von Stiltransfer mit CycleGAN}}{12}{figure.11}%

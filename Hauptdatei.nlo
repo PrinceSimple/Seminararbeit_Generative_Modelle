@@ -12,4 +12,6 @@
 \nomenclatureentry{aDCGAN@[{DCGAN}]\begingroup Deep Convolutional Generative Adversarial Networks\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{aKL-Divergenz@[{KL-Divergenz}]\begingroup Kullback-Leibler-Divergenz\nomeqref {0}|nompageref}{iii}
 \nomenclatureentry{aSRGAN@[{SRGAN}]\begingroup Super Resolution Generative Adversarial Network\nomeqref {0}|nompageref}{iii}
-\nomenclatureentry{aDCGAN@[{DCGAN}]\begingroup Deep Convolutional Generative Adversarial Network\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aPG-GAN@[{PG-GAN}]\begingroup Progressive Growing Generative Adversarial Network\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aIEEE@[{IEEE}]\begingroup Institute of Electrical and Electronics Engineers\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{aAdaIN@[{AdaIN}]\begingroup Adaptive Instance Normalization\nomeqref {0}|nompageref}{iii}
